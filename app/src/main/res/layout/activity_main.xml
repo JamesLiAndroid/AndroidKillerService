@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/start"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_gonggao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_yhxuzhi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="yes"
+                android:text="接受" />
+
+            <Button
+                android:id="@+id/bt_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="no"
+                android:text="拒绝" />
+
+            <Button
+                android:id="@+id/bt_daili"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ipay"
+                android:text="我要代理" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_Main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tv_qq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:textColor="#ff0000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/v_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_qq"
+            android:background="@android:color/darker_gray" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v_line"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户设置"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="接收邮箱:"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_useremail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="必填,格式如XXX@139.com"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="邮箱密码:"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="必填,仅用于登录邮箱发送邮件"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="手机号码:"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_phonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="选填,用于接收位置短信"
+                        android:inputType="text|textCapCharacters|textCapWords|textCapSentences|textAutoCorrect|textAutoComplete|textMultiLine|textImeMultiLine|textNoSuggestions|textUri|textEmailAddress|textEmailSubject|textShortMessage|textLongMessage|textPersonName|textPostalAddress|textPassword|textVisiblePassword|textWebEditText|textFilter|textPhonetic|textWebEmailAddress|textWebPassword|number|numberSigned|numberDecimal|numberPassword|phone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="功能设置"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_tonghuajilu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="通话记录" />
+
+                    <CheckBox
+                        android:id="@+id/cb_duanxinjilu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="短信记录" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_tonghualuyin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="通话录音" />
+
+                    <CheckBox
+                        android:id="@+id/cb_weizhijilu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="位置记录" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发送方式"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_net"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="有网就发" />
+
+                    <CheckBox
+                        android:id="@+id/cb_wifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WiFi发送" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/testsave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="testSave"
+                android:text="保存" />
+
+            <Button
+                android:id="@+id/zhucehide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="zhucehide"
+                android:text="注册" />
+
+            <Button
+                android:id="@+id/sencondhide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="hide"
+                android:text="隐藏" />
+
+            <Button
+                android:id="@+id/helpview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="help"
+                android:text="帮助" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

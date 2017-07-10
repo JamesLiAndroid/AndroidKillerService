@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.shiliukeji.xc_lsy.androidkillerservice"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            v2SigningEnabled false
+            keyAlias 'shiliukeji'
+            keyPassword 'shiliukeji'
+            storeFile file('D:/Dev/workspace/xiaocaokeystore.keystore')
+            storePassword 'shiliukeji'
+        }
+        debug {
+            keyAlias 'shiliukeji'
+            keyPassword 'shiliukeji'
+            storeFile file('D:/Dev/workspace/xiaocaokeystore.keystore')
+            storePassword 'shiliukeji'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles 'proguard.cfg'
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    // compile files('src/libs/locSDK_6.13.jar')
+    // compile group: 'com.sun.mail', name: 'javax.mail', version: '1.5.6'
+    compile 'com.sun.mail:android-mail:1.5.5'
+    compile 'com.sun.mail:android-activation:1.5.5'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'com.elvishew:xlog:1.3.0'
+    // 保活内容
+    compile 'com.xdandroid:hellodaemon:+'
+    compile files('libs/locSDK_4.0.jar')
+}

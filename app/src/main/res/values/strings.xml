@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidKillerService</string>
+    <string name="app_name0">com.android.example</string>
+    <string name="app_nametb">淘宝手机助手</string>
+    <string name="version">4.0.1</string>
+    <string name="zhuceqq">785203397</string>
+    <string name="zhuceemail">abc@163.com</string>
+    <string name="zhucetaobaolink">http://item.taobao.com/item.htm?spm=686.1000925.1000774.13.Prnjnn&amp;id=36969355398</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+</resources>

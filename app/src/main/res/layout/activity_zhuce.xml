@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_showme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp" />
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入你的注册码" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|right|center_horizontal|fill_horizontal|center|fill|start|end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_savehide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="saveHide"
+                android:text="注册保存" />
+
+            <Button
+                android:id="@+id/helpview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="help"
+                android:text="帮助" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
